@@ -1,0 +1,28 @@
+Soldier States
+-idle (5 seconds)
+	-regen health
+	-wait for escort message from civilians
+-patrol
+	-fed up with idling
+	-follow random path
+	-delay message-head back to the base(10seconds)
+		-head back to base after zombie combat
+-shoot
+	-face zombie
+	-pull trigger(damage1-80)
+	-check zombie status/message
+	-reload(7 shots)
+-EscortCiv
+	-receive message from civ.
+	-follows civ to random pills
+	-if zombies come near, soldier shoots him in the face
+	-after pills are received, leads civilian back to base
+
+-backToBase
+	-straight line back to base, same behavior as patrol
+
+-die
+	-new one spawns back at the base
+
+Patrol, Protect, and Back To Base, are all movement states.
+Shoot, Idle, and Dead are all stationary states.
